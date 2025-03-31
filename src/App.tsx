@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "./components/Header";
-import UserContainer from "./components/UserContainer";
-import ChatContainer from "./components/ChatContainer.tsx";
-import ServerContainer from "./components/ServerContainer";
+import Header from "./components/Header/Header";
+import UserContainer from "./components/UserContainer/UserContainer";
+import ChatContainer from "./components/ChatContainer/ChatContainer";
+import ServerContainer from "./components/ServerContainer/ServerContainer";
 
 function App() {
   return (

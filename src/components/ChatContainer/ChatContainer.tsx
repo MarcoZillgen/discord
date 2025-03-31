@@ -1,6 +1,6 @@
 import { User } from "feather-icons-react";
 import Message from "./Message";
-import Searchbar from "./Searchbar";
+import Inputbar from "./Inputbar";
 
 const messages = [
   {
@@ -63,7 +63,7 @@ export default function ChatContainer() {
             />
           ))}
       </div>
-      <Searchbar />
+      <Inputbar />
     </section>
   );
 }

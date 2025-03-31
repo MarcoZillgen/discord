@@ -1,5 +1,5 @@
-import BlackBox from "./BlackBox";
-import CategoryCard from "./CategoryCard";
+import BlackBox from "../_general/BlackBox";
+import CategoryCard from "../_general/CategoryCard";
 import UserCard from "./UserCard";
 
 const exampleUsers = [
@@ -51,30 +51,36 @@ export default function UserContainer() {
       {/* call users */}
       <BlackBox className="flex-col w-full max-h-1/3">
         <CategoryCard name="Call" open>
-          {exampleUsers.map((user, index) =>
-            index == 0 ? (
-              <UserCard
-                key={index}
-                name={user.name}
-                profile={user.profile}
-                selected
-              />
-            ) : (
-              <UserCard key={index} name={user.name} profile={user.profile} />
-            )
-          )}
+          {exampleUsers.map((user, index) => (
+            <UserCard
+              key={index}
+              name={user.name}
+              profile={user.profile}
+              userId={Math.random().toString(36).slice(2, 9)}
+            />
+          ))}
         </CategoryCard>
       </BlackBox>
       {/* all users */}
       <BlackBox className="flex-col flex-grow">
         <CategoryCard name="Online" open>
           {exampleUsers.map((user, index) => (
-            <UserCard key={index} name={user.name} profile={user.profile} />
+            <UserCard
+              key={index}
+              name={user.name}
+              profile={user.profile}
+              userId={Math.random().toString(36).slice(2, 9)}
+            />
           ))}
         </CategoryCard>
         <CategoryCard name="Offline" open>
           {exampleUsers.map((user, index) => (
-            <UserCard key={index} name={user.name} profile={user.profile} />
+            <UserCard
+              key={index}
+              name={user.name}
+              profile={user.profile}
+              userId={Math.random().toString(36).slice(2, 9)}
+            />
           ))}
         </CategoryCard>
       </BlackBox>
